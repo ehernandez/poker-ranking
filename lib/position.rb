@@ -1,6 +1,9 @@
 class Position
 
-	def initialize (name, buy_ins, prize)
+	attr_accessor :rank, :name, :buy_ins, :prize
+
+	def initialize (rank, name, buy_ins, prize)
+		@rank = rank
 		@name = name
 		@buy_ins = buy_ins
 		@prize = prize

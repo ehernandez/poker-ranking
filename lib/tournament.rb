@@ -5,4 +5,8 @@ class Tournament
 	end
 
 
+	def winner() 
+		Position.new(1,'Joao', 0, 30)
+	end
+
 end
