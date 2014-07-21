@@ -5,3 +5,5 @@ class Position
 		@buy_ins = buy_ins
 		@prize = prize
 	end
+
+end
