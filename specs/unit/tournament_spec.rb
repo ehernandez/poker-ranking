@@ -10,6 +10,14 @@ describe Tournament do
 
 	subject { Tournament.new(positions) }
 
+	it 'assigns 1 point of strength to the first one on a game of three players ' do
+	 	expect(subject.strength('Joao')).to eq(1)
+	end
+
+	it 'assigns -1 point of strength to the last one on a game of three players ' do
+	 	expect(subject.strength('Pedro')).to eq(-1)
+	end
+
 	it 'determinates which player is the winner' do
 		expect(subject.winner.rank).to eq(1)
 	end

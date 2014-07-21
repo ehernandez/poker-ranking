@@ -1,12 +1,20 @@
 class Tournament
 
+	attr_accessor :positions
+
 	def initialize(positions)
 		@positions = positions
 	end
 
-
 	def winner() 
-		Position.new(1,'Joao', 0, 30)
+		positions.find { |position| position.rank == 1 }
+	end
+
+	def strength(player)
+		sum = positions.map(&:rank).reduce(0, :+)
+		rank = positions.find { |position| position.name == player }.rank
+
+		sum/positions.size - rank 
 	end
 
 end
