@@ -20,14 +20,14 @@ describe Ranking do
 
 	subject { Ranking.new(tournaments) }
 
-#	it 'acumulates prize by name' do
-#		expect(subject.rank_by_prize[0].name).to eq('Joao')
-#		expect(subject.rank_by_prize[0].prize).to eq(40)
-#		expect(subject.rank_by_prize.size).to eq(3)
-#	end
-
 	it 'calculate prize for Joao as 40' do
 		expect(subject.sum_prize('Joao')).to eq(40)
+	end
+
+	it 'acumulates prize by name' do
+		expect(subject.rank_by_prize[0][:name]).to eq('Joao')
+		expect(subject.rank_by_prize[0][:prize]).to eq(40)
+		expect(subject.rank_by_prize.size).to eq(3)
 	end
 
 end
